@@ -1,0 +1,301 @@
+body{
+    margin: 0%;
+}
+#parent{
+display: flex;
+flex-direction: column;
+margin: none;
+border: 1px solid transparent;
+width: 100%;
+height: 100%;
+padding: none;
+box-sizing: border-box;
+}
+
+#one{
+display: flex;
+flex-direction: row;
+border: 1px solid transparent;
+width: 100%;
+height: 140px;
+background-color: transparent;
+position: sticky; top:0;
+}
+
+.onedivsl{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid transparent;
+        height: 100%;
+        width: 100%;
+}
+
+#onel{
+        border: 1px solid transparent;
+        height: 100%;
+        width: 12%;
+}
+
+#onem{
+        border: 1px solid transparent;
+        height: 100%;
+        width: 40%;
+        cursor: pointer;
+}
+
+#oner{
+        border: 1px solid transparent;
+        height: 100%;
+        width: 48%;
+}
+
+.onedivsr{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid transparent;
+        height: 100%;
+        width: 100%;
+}
+
+#onerl{
+        border: 1px solid transparent;
+        height: 100%;
+        width: 55%;
+}
+.search_bar{
+        border: 1.5px solid black;
+        width: 100%;
+        height: 30px;
+        margin-top: 22px;
+        cursor: pointer;
+        background-color: white;
+}
+
+#onerr{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid transparent;
+        height: 100%;
+        width: 45%;
+}
+
+.onerrl{
+        border: 1px solid transparent;
+        height: 100%;
+        width: 20%;
+}
+.onerrr{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid transparent;
+        height: 100%;
+        width: 80%;
+}
+
+    #two{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid transparent;
+        width: 100%;
+        height: 45px;
+        background-color: transparent;
+        top:0;
+        z-index:100;
+        }
+
+        .twobs{
+                border: 1px solid black;
+                height: 60%;
+                margin-top: 10px;
+                text-align: center;
+                cursor: pointer;
+        }
+        #twobs1{
+                margin-left: 83px;
+                width: 45px;
+        }
+        #twobs2{
+                margin-left: 8px;
+                width: 65px;
+        }
+        #twobs3{
+                margin-left: 8px;
+                width: 55px;
+        }
+
+        #twobs4{
+                border: 2px solid black;
+                height: 28%;
+                margin-top: 15px;
+                cursor: pointer;
+                margin-left: 975px;
+                width: 15px;
+                
+        }
+        #twobs5{
+                border: 2px solid black;
+                height: 28%;
+                margin-top: 15px;
+                cursor: pointer;
+                margin-left: 15px;
+                width: 15px;
+        }
+
+         #three{
+                display: flex;
+                flex-direction: row;
+                border: 1px solid transparent;
+                width: 100%;
+                height: 400px;
+                gap: 0%;
+                }
+
+.slots{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+        height: 100%;
+        width: 100%;
+}
+
+.imgup{
+       border: 0.5px solid black;
+       width: 100%;
+       height: 82%;
+       margin: auto;
+}
+
+.imgdown{
+        border: 0.5px solid black;
+        width: 100%;
+        height: 18%;
+        margin: auto;
+ }
+
+                #four{
+                        display: flex;
+                        flex-direction: row;
+                        border: 1px solid transparent;
+                        width: 100%;
+                        height: 400px;
+                        gap: 0%;
+                        }
+
+                        #five{
+                                display: flex;
+                                flex-direction: row;
+                                border: 1px solid transparent;
+                                width: 100%;
+                                height: 400px;
+                                gap: 0%;
+                                } 
+                                
+                                #six{
+                                        border: 1px solid transparent;
+                                        width: 100%;
+                                        height: 250px;
+                                        }
+
+                                        #seven{
+                                                border: 1px solid transparent;
+                                                width: 100%;
+                                                height: 15px;
+                                                }
+
+                                                #eight{
+                                                        border: 1px solid transparent;
+                                                        width: 100%;
+                                                        height: 40px;
+                                                        }
+                                                        #nine{
+                                                                border: 1px solid transparent;
+                                                                width: 100%;
+                                                                height: 20px;
+                                                                }
+
+                                                                #ten{
+                                                                        border: 1px solid transparent;
+                                                                        width: 100%;
+                                                                        height: 110px;
+                                                                        }
+
+                                                                        #eleven{
+                                                                                border: 1px solid transparent;
+                                                                                width: 100%;
+                                                                                height: 10px;
+                                                                                }
+
+                                                                                #twelve{
+                                                                                        border: 1px solid transparent;
+                                                                                        width: 100%;
+                                                                                        height: 270px;
+                                                                                        }
+
+                                                                                        #thirteen{
+                                                                                                display: flex;
+                                                                                                flex-direction: row;
+                                                                                                border: 1px solid transparent;
+                                                                                                width: 100%;
+                                                                                                height: 190px;
+                                                                                                }
+
+
+                                                                                        #help_block{
+                                                                                                border: 1px solid transparent;
+                                                                                                margin-left: 80px;
+                                                                                                height: 100%;
+                                                                                                width: 125px;
+                                                                                
+                                                                                        }
+                                                                                        #follow_us_block{
+                                                                                                border: 1px solid transparent;
+                                                                                                margin-left: 40px;
+                                                                                                height: 100%;
+                                                                                                width: 70px;
+                                                                                        }
+
+                                                                                        #company_block{
+                                                                                                border: 1px solid transparent;
+                                                                                                margin-left: 40px;
+                                                                                                height: 100%;
+                                                                                                width: 80px;
+                                                                                        }
+
+                                                                                        #policies_block{
+                                                                                                border: 1px solid transparent;
+                                                                                                margin-left: 40px;
+                                                                                                height: 100%;
+                                                                                                width: 125px;
+                                                                                        }
+
+                                                                                                #fourteen{
+                                                                                                        border: 1px solid transparent;
+                                                                                                        width: 100%;
+                                                                                                        height: 235px;
+                                                                                                        }
+
+                                                                                                        #fifteen{
+                                                                                                                border: 1px solid transparent;
+                                                                                                                width: 100%;
+                                                                                                                height: 40px;
+                                                                                                                }
+
+                                                                                                                #sixteen{
+                                                                                                                        border: 1px solid transparent;
+                                                                                                                        width: 100%;
+                                                                                                                        height: 110px;
+                                                                                                                        }
+
+                                                                                                                        #seventeen{
+                                                                                                                                align-items: center;
+                                                                                                                                border: 1px solid transparent;
+                                                                                                                                width: 100%;
+                                                                                                                                height: 30px;
+                                                                                                                                }
+
+                                                                                                                                #eighteen{
+                                                                                                                                        border: 1px solid transparent;
+                                                                                                                                        width: 100%;
+                                                                                                                                        height: 90px;
+                                                                                                                                        }
