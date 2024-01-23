@@ -1,7 +1,7 @@
 
 #ham{
-    width: 30px;
-    margin-left: 10px;
+  width: 30px;
+  margin-left: 10px;
 
 
 }
@@ -12,97 +12,97 @@ cursor: pointer;
 }
 
 #header{
-    position: fixed;
-    display: grid;
-    /* border: solid; */
-    margin-top: 1%;
-    grid-template-columns: 40px 200px 200px 400px;
-    grid-template-rows: 100px;
-  
+  position: fixed;
+  display: grid;
+  /* border: solid; */
+  margin-top: 1%;
+  grid-template-columns: 40px 200px 200px 400px;
+  grid-template-rows: 100px;
+
 }
 
 #zaraheader{
-    
+  
 position: fixed;
-    margin-left: 6%;
-    cursor: pointer;
-  
-  
+  margin-left: 6%;
+  cursor: pointer;
+
+
 }
 
 #search{
-   
-    width: 100px;
-  /* border: solid; */
-    font-size: 14px;
-    margin-left: 1020px;
-  
-  
+ 
+  width: 100px;
+/* border: solid; */
+  font-size: 14px;
+  margin-left: 1020px;
+
+
 }
 a{
-    text-decoration: none;
-    color: rgb(54, 51, 51);
-    font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgb(54, 51, 51);
+  font-family: Arial, Helvetica, sans-serif;
 }
 #search>div{
-    width: 100%;
-    background-color:rgb(83, 81, 81);;
-    height: 2px;
-    margin-top: 3px;
-    /*border: solid;*/
+  width: 100%;
+  background-color:rgb(83, 81, 81);;
+  height: 2px;
+  margin-top: 3px;
+  /*border: solid;*/
 }
 #logbox{
 
- display: flex;
+display: flex;
 width: 500px;
 margin-left: 600px;
- 
+
 
 }
 #logbox>div{
 margin-right: 1px;
 margin-left: 40px;
- 
- font-size: 9px;
- font-weight: 500;
- text-align: center;
- /* margin-top: 6%; */
+
+font-size: 9px;
+font-weight: 500;
+text-align: center;
+/* margin-top: 6%; */
 
 }
 #picbox{
- border: solid 1px white;
- 
- padding-top: 160px;
- /* display: flex; */
- /* margin-top: 7%; */
+border: solid 1px white;
+
+padding-top: 160px;
+/* display: flex; */
+/* margin-top: 7%; */
 
 }
 #mainimg{
- width: 570px;
- margin: auto;
+width: 570px;
+margin: auto;
 
 }
 #mainimg>img{
- width: 100%;
- margin-top: 25%;
+width: 100%;
+margin-top: 25%;
 
 }
 #man{
- 
+
 font-size: 10px;
 height: 30px;
- margin-top: 360px;
+margin-top: 360px;
 display: flex;
 
- 
- 
+
+
 }
 
 #kids{
 
- height: 20px;
- font-size: 10px;
- margin-top: 360px;
+height: 20px;
+font-size: 10px;
+margin-top: 360px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -149,51 +149,51 @@ background-color: white;
 outline: none;
 }
 .headerimg{
- height: 90px;
- width: 220px;
+height: 90px;
+width: 220px;
 }
 .d4{
-    margin-top: 160px;
-    font-size: 10px;
+  margin-top: 160px;
+  font-size: 10px;
 }
 .d5{
-  
-   margin-top: 100px;
-   width: 700px;
-   border-top-style: groove;
-   font-size: 10px;
-  }
-  h5{
-      margin-bottom: -10px;
-  }
-  .mySlides {display:none;}
-  .rightbtn{
-      font-size: 25px;
-  
-     border: none;
-      background-color: white;
-      font-family: 'Courier New', Courier, monospace;
-      
-  }
-  .leftbtn{
-      
-      font-size: 25px;
-      border: none;
-   
-      background-color: white;
-      font-family: 'Courier New', Courier, monospace;
-  }
-  .leftbtn:hover{
-  
-   background-color: darkgray;
-   
-  }
-  .rightbtn:hover{
-    background-color: darkgray;
+
+ margin-top: 100px;
+ width: 700px;
+ border-top-style: groove;
+ font-size: 10px;
+}
+h5{
+    margin-bottom: -10px;
+}
+.mySlides {display:none;}
+.rightbtn{
+    font-size: 25px;
+
+   border: none;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
     
-  }
-  /* sidebarstart */
-  .sidebar {
+}
+.leftbtn{
+    
+    font-size: 25px;
+    border: none;
+ 
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.leftbtn:hover{
+
+ background-color: darkgray;
+ 
+}
+.rightbtn:hover{
+  background-color: darkgray;
+  
+}
+/* sidebarstart */
+.sidebar {
 height: 100%;
 width: 0;
 position: fixed;
@@ -262,8 +262,8 @@ display: block;
 margin-left: 10px;
 margin-top: 1%;
 }
-  /* sidebarend */
-  /* dropdownstart */
+/* sidebarend */
+/* dropdownstart */
 
 .dropdown {
 position: relative;
@@ -344,10 +344,10 @@ margin-left: -40px;
 /* .dropdown a:hover {background-color: #ddd;} */
 
 .show {display: block;}
-  /* dropdownend */
-  #leftA{
-      margin-top: 14px;
-  }
+/* dropdownend */
+#leftA{
+    margin-top: 14px;
+}
 /* helpcss */
 
 #radio {
@@ -463,48 +463,48 @@ box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
 
 /* infocss */
 .d6{
-  height: 400px;
-   width: 1024px;
-  background-color: azure;
-  margin-left: 100px;
+height: 400px;
+ width: 1024px;
+background-color: azure;
+margin-left: 100px;
 }
 .d7{
-   margin-top: 200px;
-   height: 50px;
-   width: 800px;
-   margin-left: 100px;
+ margin-top: 200px;
+ height: 50px;
+ width: 800px;
+ margin-left: 100px;
 }
 .d8{
-   margin-top: 100px;
-   margin-left: 100px;
+ margin-top: 100px;
+ margin-left: 100px;
 }
 .thead{
-    font-family: Franklin Gothic medium ;
+  font-family: Franklin Gothic medium ;
 }
 .td1{
-    width: 200px;
+  width: 200px;
 }
 .td2{
-    width: 120px;
+  width: 120px;
 }
 .table1{
-   width: 1100px;
-   font-family: Franklin Gothic ;
-   font-size: 11PX;
+ width: 1100px;
+ font-family: Franklin Gothic ;
+ font-size: 11PX;
 }
 .td3{
- text-align: end;
+text-align: end;
 }
 .textmargin{
-   margin: 1px;
-   font-family: Franklin Gothic;
-   font-size: 10px;
+ margin: 1px;
+ font-family: Franklin Gothic;
+ font-size: 10px;
 }
 td>a{
-    text-decoration: none;
-    color: black;
-    font-size: 10px;
-    font-family: Franklin Gothic ;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  font-family: Franklin Gothic ;
 }
 
 

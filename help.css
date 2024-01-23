@@ -1,0 +1,190 @@
+body{
+    font-family:"helvetica";
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 9em;
+    /* width: 100vh; */
+    /* background-color: black; */
+    padding: 1.5em 0.5em 0em 1em;
+    position: sticky;
+    /* position: fixed; */
+    top: 0;
+}
+nav{
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+}
+.hidden{
+    /* background-color: black; */
+    color: black;
+    height: 100vh;
+    width: 100%;
+    max-width: 180px;
+    position: fixed;
+    top: 0;
+    left: -180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    transition: .3s ease;
+}
+.hidden.active{
+    left: 0;
+}
+ul>strong{
+    color: red;
+}
+.ul{
+    margin-left: -30px;
+    margin-top: -30px;
+    text-align: left;
+}
+.menu{
+    height: 50px;
+    width: 50px; 
+    position: relative;
+}
+.menu span{
+    height: 1px;
+    width: 30%;
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    top: 10%;
+    /* right: 50%; */
+    transform: translate(-50%,-50%);
+    transition: .3s ease ;
+}
+.menu span:nth-child(1){
+    top: 40%;
+}
+.menu span:nth-child(2){
+    top: 60%;
+}
+.menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.menu.active span:nth-child(2){
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+nav img{
+    width: 43vh;
+}
+.login{
+    margin-left: 40%;
+}
+nav>a{
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+.image{
+    background-image: url(https://static.zara.net/photos///contents/mkt/spots/ss24-help-customer/subhome-xmedia-02-north//w/1349/IMAGE-landscape-web-43e46442-a65e-499e-a1ea-4552afc12701-default_0.jpg?ts=1704876408263);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+input{
+    width: 55%;
+    outline: none;
+    height: 35px;
+    margin: 65px 0px 0px 90px;
+    /* margin-top: ; */
+}
+.first-box{
+/* background-color: red; */
+width: 85%;
+margin: auto;
+margin-top: 5%;
+}
+.first-sub{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    align-items: center;
+}
+.first-sub>div>p{
+    border: 1px solid black;
+    color: gray;
+    font-size: 10px;
+    padding: 5px
+}
+.second-box{
+    /* background-color: red; */
+    width: 85%;
+    margin: auto;
+    margin-top: 4%;
+}
+.second-sub{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.second-sub>div{
+    border: 1px solid black;
+    padding: 20px 45px 40px 30px;
+}
+#p{
+font-size: 14px;
+color: black;
+margin-bottom: 10%;
+}
+.second-sub>div>p,a{
+    font-size: 10px;
+    color: grey;
+}
+.third-box{
+    /* background-color: red; */
+    width: 85%;
+    margin: auto;
+    margin-top: 8%;
+}
+.third-sub{
+    display: flex;
+    width: 54%;
+    /* background-color: green; */
+    justify-content: space-around
+}
+.third-sub>div{
+    /* background-color: yellow; */
+    width: 24%;
+}
+.third-sub>div>p{
+    font-size: 10px;
+    color: grey;
+}
+.fourth-box{
+    width: 85%;
+    margin: auto;
+    margin-top: 18%;
+    display: flex;
+    justify-content: space-between;
+}
+.fourth-sub{
+    width: 22%;
+    display: flex;
+    justify-content: space-around;
+}
+.fourth-box p{
+    font-size: 10px;
+    color: grey;
+}
+.fourth-sub>div:nth-child(2)>p{
+    color: darkgray;
+}
+.fifth-box{
+    width: 85%;
+    margin: 8% auto;
+}
+.fifth-box>p{
+    font-size: 8px;
+    color: grey;
+}

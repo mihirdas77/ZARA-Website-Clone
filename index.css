@@ -18,7 +18,7 @@ body{
     display: flex;
     height: 100%;
     width: 300%;
-    transition: all 1.5s;
+    transition: all 0.3s;
 }
 .content>div{
     flex-basis: 100%;
@@ -110,30 +110,6 @@ body{
         background-image: url(https://static.zara.net/photos///contents/mkt/spots/ss24-north-kids-girl/subhome-xmedia-01//w/1366/IMAGE-landscape-default-fill-c2cfbd3e-64ed-4d08-8b92-578f926704bc-default_0.jpg?ts=1704383645430)
     }
 }
-/* .Image1{
-    background-image: url(https://static.zara.net/photos///contents/mkt/spots/ss24-north-woman-new/subhome-xmedia-03-2//w/1366/IMAGE-landscape-fill-179e689f-3dbf-44f4-a07f-b06392e5cb1e-default_0.jpg?ts=1705573439778);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-.Image2{
-    background-image: url(https://static.zara.net/photos///contents/mkt/spots/ss24-north-woman-shoes/subhome-xmedia-03-2//w/1366/IMAGE-landscape-fill-37d9e031-1dcc-4155-8ca8-283493f6adc6-default_0.jpg?ts=1705577222509);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-.Image3{
-    background-image: url(https://static.zara.net/photos///contents/mkt/spots/ss24-north-woman-shirts/subhome-xmedia-03//w/1366/IMAGE-landscape-fill-209a72b2-92c7-48c3-8f40-b6c8048cf817-default_0.jpg?ts=1705576700071);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-.Image4{
-    background-image: url(https://static.zara.net/photos///contents/mkt/spots/ss24-north-woman-collection/subhome-xmedia-03-2//w/1366/IMAGE-landscape-fill-b2ac954d-e7ee-448e-b9df-ff0d528bbada-default_0.jpg?ts=1705573762889);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-} */
 header{
     height: 13em;
     /* width: 100vh; */
@@ -149,7 +125,7 @@ nav{
 }
 .hidden{
     /* background-color: black; */
-    color: red;
+    color: white;
     height: 100vh;
     width: 100%;
     max-width: 180px;
@@ -168,17 +144,18 @@ nav{
     left: 0;
 }
 ul>strong{
-    color: black;
+    color: red;
 }
 .ul{
-    margin-left: -30px;
+    margin-left: -20px;
     margin-top: -30px;
     text-align: left;
 }
 .menu{
     height: 50px;
-    width: 50px; 
+    width: 55px;
     position: relative;
+    cursor: pointer;
 }
 .menu span{
     height: 1px;
@@ -209,7 +186,7 @@ nav img{
     width: 65vh;
     margin-left: 3%;
 }
-.btn{
+.search{
 color: rgb(99,101,99);
 background-color: rgb(255,255,255);
 width: 55vh;
@@ -222,7 +199,7 @@ margin-top: 13px;
 }
 a{
     font-size: 14px;
-    color: whitesmoke;
+    color: black;
     text-decoration: none;
 }
 .categories{
@@ -233,10 +210,10 @@ a{
     margin-top: 1%;
     
 }
-.sale{
-    /* display: flex;
-    flex-direction: column; */
-    /* background-color: red; */
+/* .sale{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
     margin-top: 4%;
     width: 100vh;
     margin-left: 25%;
@@ -251,11 +228,11 @@ a{
 }
 .online{
     display: flex;
-    /* background-color: red; */
-    /* margin-top: 10%; */
+    background-color: red;
+    margin-top: 10%;
     width: 50vh;
     margin-left: 36%;
-    /* text-align: center; */
+    text-align: center;
     justify-content: space-evenly;
 }
 .online:hover{
@@ -268,11 +245,12 @@ a{
 .footer{
     
         background-image: url(https://static.euronews.com/articles/stories/06/78/82/64/1200x675_cmsv2_fce03a30-1461-59ba-b6e8-f4ccdccd583a-6788264.jpg);
-        /* background-image: url(https://static.zara.net/photos///contents/mkt/spots/aw23-sale/subhome-xmedia-launch-2-woman//w/562/IMAGE-portrait-aw23-sale-post-fill-965778ba-f775-4be0-852e-908cb2e68cd2-ar_LB@DZ_0.jpg?ts=1705401536917); */
+        background-image: url(https://static.zara.net/photos///contents/mkt/spots/aw23-sale/subhome-xmedia-launch-2-woman//w/562/IMAGE-portrait-aw23-sale-post-fill-965778ba-f775-4be0-852e-908cb2e68cd2-ar_LB@DZ_0.jpg?ts=1705401536917);
         background-repeat: no-repeat;
         background-size: cover;
-        /* background-position: center center; */
+        background-position: center center;
         height: 100vh;
-        /* width: 100vh; */
-        /* background-color: black; */
-    }
+        width: 100vh;
+        background-color: black;
+    } */
+

@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+body{
+    font-family:"helvetica";
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 12em;
+    /* width: 100vh; */
+    background-color: white;
+    padding: 1.5em 0.5em 0em 1em;
+    position: sticky;
+    /* position: fixed; */
+    top: 0;
+}
+nav{
+    /* background-color: green; */
+    height: 7em;
+    display: flex;
+    justify-content: space-around;
+}
+nav img{
+    width: 45vh;
+}
+.login{
+    margin-left: 55%;
+}
+nav>a{
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+.first-box{
+display: flex;
+/* border: 1px solid black; */
+width: 50%;
+margin-left: -2%;
+margin-top: 3%;
+}
+.first-box>div{
+width: 50%;
+border: 1px solid black;
+}
+.first-box>div>p{
+    font-size: 12px;        
+    text-align: center;
+}
+hr{
+    height: 1px;
+    background-color: black;
+    margin-top: -1px;
+    right: 0;
+}
+.second-box{
+    display: flex;
+    border: 1px solid black;
+}
+.second-box>div{
+    border: 1px solid black;
+    width: 17%;
+    height: 554px
+}
+.second-box>div>div{
+    border: 1px solid black;
+}
+.second-box>div>div:nth-child(2){
+    padding: 10px;
+}
+.second-box p{
+    font-size: 10px;
+    color: grey;
+}
+img{
+    width: 100%;
+}
+.sub-box{
+    display: flex;
+}
+.sub-box>p:nth-child(2){
+font-size: 18px;
+margin-top : -1px;
+}
+.third-box{
+    display: flex;
+}
+.third-box>div{
+border: 1px solid black;
+width: 20%;
+text-align: center;
+}
+footer{
+    position: fixed;
+    background-color: white;
+    height: 5em;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+footer>div{
+    display: flex;
+    justify-content: end;
+    border: 1px solid black;
+}
+footer>div>div:nth-child(2){
+    border: 1px solid black;
+    width: 28vh;
+}
+footer>div>div:nth-child(1){
+    margin-right: 4%;
+}
+footer>div p{
+    font-size: 10px;
+    color: grey;
+    text-align: right;
+}
+footer>div p:nth-child(1){
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.total{
+margin-left: 15%;
+}
+footer>div button{
+    width: inherit;
+    border: none;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
