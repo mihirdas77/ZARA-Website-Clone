@@ -2,9 +2,9 @@
 # Zara Clone Project
 
 ## Team Members
-- [Member 1 Name](#)
-- [Member 2 Name](#)
-- [Member 3 Name](#)
+- [Mihir Das]
+- [Vishaya Sonkar] 
+- [Bingu Santhosh Kumar]
 
 ## Project Description
 This project is a collaborative effort to create a simplified clone of the Zara website using HTML, CSS, and JavaScript. The goal is to replicate the main features and design elements of the Zara website to gain practical experience and showcase our skills in web development.
@@ -20,15 +20,19 @@ This project is a collaborative effort to create a simplified clone of the Zara 
 - *script.js*: JavaScript file for adding interactivity and dynamic features.
 
 ## Setup Instructions
-1. Clone the repository: git clone [repository_url]
+1. Clone the repository: git clone [https://github.com/mihirdas77/ZARA-Website-Clone]
 2. Open index.html in your preferred web browser.
 
 ## Features
-- [ ] Homepage layout
-- [ ] Product listings
-- [ ] Product details page
-- [ ] Shopping cart functionality
-- [ ] User authentication (if applicable)
+Homepage layout
+Product listings
+Product details page
+Shopping cart functionality
+User authentication 
+
+
+## Deployed Link
+   [https://zara-website.netlify.app/]
 
 ## Contributing
 Feel free to contribute by forking the repository and submitting pull requests. Make sure to follow the [code of conduct](CODE_OF_CONDUCT.md).
@@ -42,5 +46,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 For any inquiries or feedback, please contact us:
-- Email: [your@email.com](mailto:your@email.com)
-- Twitter: [@yourtwitterhandle](https://twitter.com/yourtwitterhandle)
+- Email: [mihiirdas7707@gmail.com]
