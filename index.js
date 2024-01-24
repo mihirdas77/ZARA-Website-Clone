@@ -1,13 +1,24 @@
-let Hidden = document.querySelector(".hidden")
-let Menu = document.querySelector(".menu")
+let Hidden = document.querySelectorAll(".hidden")
+let Menu = document.querySelectorAll(".menu")
 
 
-Menu.addEventListener('click',HamBurger)
+// Menu.addEventListener('click',HamBurger)
 
-function HamBurger(){
-    Hidden.classList.toggle('active');
-    Menu.classList.toggle('active')
-}
+
+
+Menu.forEach(function(ele){
+    ele.addEventListener('click',function(){
+        ele.classList.toggle('active')
+        Hidden.forEach(function(ele){
+            ele.classList.toggle('active')
+        })
+    })
+})
+
+// function HamBurger(){
+//     Hidden.classList.toggle('active');
+//     Menu.classList.toggle('active')
+// }
 
 
 let content = document.querySelector(".content")

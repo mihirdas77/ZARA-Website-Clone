@@ -220,20 +220,9 @@
 
         #input2:focus {
             outline: none;
-        }
+        }/*  */
 
-        #parent {
-            display: flex;
-            flex-direction: column;
-            margin: none;
-            border: 1px solid transparent;
-            width: 100%;
-            height: 100%;
-            padding: none;
-            box-sizing: border-box;
-        }
-
-        #one {
+        /* #one {
             display: flex;
             flex-direction: row;
             border: 1px solid transparent;
@@ -250,9 +239,9 @@
             border: 1px solid transparent;
             height: 100%;
             width: 100%;
-        }
+        } */
 
-        #onel {
+        /* #onel {
             border: 1px solid transparent;
             height: 100%;
             width: 12%;
@@ -293,8 +282,8 @@
             margin-top: 22px;
             cursor: pointer;
             background-color: white;
-        }
-
+        } */
+/* 
         #onerr {
             display: flex;
             flex-direction: row;
@@ -316,7 +305,7 @@
             border: 1px solid transparent;
             height: 100%;
             width: 80%;
-        }
+        } */
 
         #six {
             border: 1px solid transparent;
@@ -602,18 +591,13 @@
             }
             if (count >= 1) {
                 alert("Login Successful")
-                window.location.href = "#";
+                window.location.href = "index.html";
 
             }
             else {
                 alert("Enter Valid Password")
             }
         }
-
-        
-
-
-
         Menu.addEventListener('click',HamBurger)
        Image.addEventListener('click',Homepage)
 
@@ -627,11 +611,11 @@ function Homepage(){
 } 
         
 
-var logindata = JSON.parse(localStorage.getItem("logindata"));
-        var Name = logindata[logindata.length - 1].name;
-        console.log(Name)
-        var putname = document.getElementById("loggin");
-        putname.textContent = Name;
+// var logindata = JSON.parse(localStorage.getItem("logindata"));
+//         var Name = logindata[logindata.length - 1].name;
+//         console.log(Name)
+//         var putname = document.getElementById("loggin");
+//         putname.textContent = Name;
     </script>
 </body>
 
