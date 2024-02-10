@@ -14,13 +14,19 @@ header{
     top: 0;
 }
 nav{
+    /* position: fixed; */
     /* background-color: green; */
+    padding-bottom: 50px;
     height: 7em;
     display: flex;
     justify-content: space-around;
 }
 nav img{
-    width: 45vh;
+    height: 180px;
+    width: 40vh;
+    /* border: 1px solid rgb(39, 249, 60); 
+    padding: 100px; */
+    
 }
 .login{
     margin-left: 55%;
@@ -38,8 +44,10 @@ margin-left: -2%;
 margin-top: 3%;
 }
 .first-box>div{
+    /* margin-top: 50px; */
 width: 50%;
-border: 1px solid black;
+border: 1px solid rgb(0, 0, 0);
+/* padding-bottom: -40px; */
 }
 .first-box>div>p{
     font-size: 12px;        
@@ -47,21 +55,21 @@ border: 1px solid black;
 }
 hr{
     height: 1px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-top: -1px;
     right: 0;
-}
-.second-box{
-    display: flex;
-    border: 1px solid black;
+    margin-bottom: 59px;
 }
 .second-box>div{
-    border: 1px solid black;
+    /* padding-top: 500px; */
+    margin-top: 200px;
+    border: 1px solid rgb(0, 0, 0);
     width: 17%;
     height: 554px
 }
 .second-box>div>div{
-    border: 1px solid black;
+    
+    border: 1px solid rgb(0, 0, 0);
 }
 .second-box>div>div:nth-child(2){
     padding: 10px;
@@ -89,7 +97,8 @@ width: 20%;
 text-align: center;
 }
 footer{
-    position: fixed;
+    /* position: fixed; */
+    padding-top: 40px;
     background-color: white;
     height: 5em;
     left: 0;

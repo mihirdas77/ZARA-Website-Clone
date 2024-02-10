@@ -1,5 +1,4 @@
 # ZARA-Website-Clone
-# Zara Clone Project
 
 ## Team Members
 - [Mihir Das]
@@ -29,7 +28,6 @@ Product listings
 Product details page
 Shopping cart functionality
 User authentication 
-
 
 ## Deployed Link
    [https://zara-website.netlify.app/]
