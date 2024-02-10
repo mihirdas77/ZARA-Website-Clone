@@ -30,7 +30,7 @@ Shopping cart functionality
 User authentication 
 
 ## Deployed Link
-   [https://zara-website.netlify.app/]
+   [https://zara-websitebymihir.netlify.app/]
 
 ## Contributing
 Feel free to contribute by forking the repository and submitting pull requests. Make sure to follow the [code of conduct](CODE_OF_CONDUCT.md).
