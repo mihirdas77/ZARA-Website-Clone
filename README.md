@@ -39,7 +39,7 @@ Feel free to contribute by forking the repository and submitting pull requests. 
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
-- Inspiration: [Zara](https://www.zara.com/)
+- Inspiration: [Zara]([https://www.zara.com/](https://zara-websiteclone.netlify.app/))
 - Thanks to any external libraries or resources used in the project.
 
 ## Contact
