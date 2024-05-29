@@ -15,9 +15,9 @@
     height: 80px;
     width: 100%;
     margin-top: 10px;
-    /* border: 1px solid black;  */
+    /* border: 1px solid black;*/
     position: fixed;
-    display: block;
+    /* display: block; */
     top: 0;
   }
   .img {
@@ -61,7 +61,7 @@
   #search {
     width: 90px;
     border: none;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     padding: 6px;
     outline: none;
     cursor: pointer;
@@ -230,7 +230,7 @@
     text-align: right;
     background-color: rgba(255, 255, 255, 0.897);
     display: none;
-    /* border: 1px solid black; */
+    /* border: 1px solid black;y */
     /* background-color: yellow; */
   }
   .toggleBar2{
@@ -257,8 +257,8 @@
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 20px;
-    /* margin-left: 35px; */
     cursor: pointer;
+    /* margin-left: 35px; */
   }
   
   .toggleBar2 >ul:nth-child(2){
@@ -277,14 +277,117 @@
     border-radius: 5px;
     margin-left: 50px;
   }
+
+  
+  
+  .detailsContainer{
+    width: 700px;
+    height: 100%;
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    /* display: flex; */
+  }
+
+  .detailsContainer > div{
+    display: flex;
+    gap: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .detailsContainer > div > div{
+    /* border: 1px solid black; */
+    width: 290px;
+    height: 400px;
+    margin-top: 25px;
+
+  }
+
+  .detailsContainer>div>div:nth-child(2){
+    height: 300px;
+    margin-top: 60px;
+  }
+  #h2{
+    margin-bottom: 40px; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+  }
+
+  .bothDetailContainer{
+    margin-top: -25px;
+  }
+u{
+  text-decoration: underline;
+}
+
   
   
   
-  
-  
-  
-  
-  
+  input[type = 'email'],
+  input[type = 'text'],
+  input[type = 'password'],
+  select{
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  #pincode{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    
+  }
+
+  #prefix{
+    width: 50px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  #telephone{
+    width: 81%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  input[type = "checkbox"]{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  input[type = "radio"]{
+    cursor: pointer;
+  }
+
+  #createBtn{
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    margin-left: 35px;
+    cursor: pointer;
+
+  }
+
+  #createBtn:hover{
+    background-color: rgba(0, 0, 0, 0.281);
+  }
+
+
+
   
   
   

@@ -1,622 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: "helvetica";
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            height: 9em;
-            /* width: 100vh; */
-            /* background-color: black; */
-            padding: 1.5em 0.5em 0em 1em;
-            position: sticky;
-            /* position: fixed; */
-            top: 0;
-        }
-
-        nav {
-            /* background-color: green; */
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .hidden {
-            /* background-color: black; */
-            color: black;
-            height: 100vh;
-            width: 100%;
-            max-width: 180px;
-            position: fixed;
-            top: 0;
-            left: -180px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 20px;
-            transition: .3s ease;
-        }
-
-        .hidden.active {
-            left: 0;
-        }
-
-        ul>strong {
-            color: red;
-        }
-
-        .ul {
-            margin-left: -30px;
-            margin-top: -30px;
-            text-align: left;
-        }
-
-        .menu {
-            height: 50px;
-            width: 50px;
-            position: relative;
-        }
-
-        .menu span {
-            height: 1px;
-            width: 30%;
-            background-color: black;
-            border-radius: 25px;
-            position: absolute;
-            top: 10%;
-            /* right: 50%; */
-            transform: translate(-50%, -50%);
-            transition: .3s ease;
-        }
-
-        .menu span:nth-child(1) {
-            top: 40%;
-        }
-
-        .menu span:nth-child(2) {
-            top: 60%;
-        }
-
-        .menu.active span:nth-child(1) {
-            top: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        .menu.active span:nth-child(2) {
-            top: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        nav img {
-            width: 43vh;
-        }
-
-        .login {
-            margin-left: 40%;
-        }
-
-        nav>a {
-            font-size: 12px;
-            color: black;
-            text-decoration: none;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidebar {
-                padding-top: 15px;
-            }
-
-            .sidebar a {
-                font-size: 18px;
-            }
-        }
-
-        /* .dropdown a:hover {background-color: #ddd;} */
-
-        .show {
-            display: block;
-        }
-
-        /* dropdownend */
-        #leftA {
-            margin-top: 14px;
-        }
-
-        /* helpcss */
-        #main {
-            display: grid;
-            grid-template-columns: 500px 400px;
-            grid-template-rows: 350px;
-            /* border: 1px solid gold; */
-        }
-
-        #left {
-            margin-top: 100px;
-            margin-left: 100px;
-
-        }
-
-        #right {
-            margin: auto;
-            margin-top: 100px;
-            /* margin-left: 50px; */
-            line-height: 15px;
-        }
-
-        #log,
-        #reg {
-            font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
-
-        }
-
-        p {
-            font-size: 10px;
-            font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
-        }
-
-        #reg,
-        #log {
-            font-size: 20px;
-        }
-
-        table {
-            margin-left: auto;
-            margin-right: auto;
-            table-layout: fixed;
-            margin-top: -120px;
-        }
-
-        button {
-            width: 200px;
-            height: 30px;
-            background-color: red;
-        }
-
-        #button_margin_right {
-            margin-left: 295px;
-            color: black;
-            background-color: white;
-            font-size: 8px;
-            cursor: pointer;
-        }
-
-        #button_margin_right:hover {
-            box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
-        }
-
-        #button_margin_left {
-            margin-left: 150px;
-            color: black;
-            background-color: white;
-            font-size: 8px;
-            cursor: pointer;
-        }
-
-        #button_margin_left:hover {
-            box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
-        }
-
-        input {
-            border-top-style: hidden;
-            border-right-style: hidden;
-            border-left-style: hidden;
-            border-bottom-style: groove;
-            background-color: white;
-        }
-
-        #input1:focus {
-            outline: none;
-        }
-
-        #input2:focus {
-            outline: none;
-        }/*  */
-
-        /* #one {
-            display: flex;
-            flex-direction: row;
-            border: 1px solid transparent;
-            width: 100%;
-            height: 140px;
-            background-color: transparent;
-            position: sticky;
-            top: 0;
-        }
-
-        .onedivsl {
-            display: flex;
-            flex-direction: row;
-            border: 1px solid transparent;
-            height: 100%;
-            width: 100%;
-        } */
-
-        /* #onel {
-            border: 1px solid transparent;
-            height: 100%;
-            width: 12%;
-        }
-
-        #onem {
-            border: 1px solid transparent;
-            height: 100%;
-            width: 40%;
-            cursor: pointer;
-        }
-
-        #oner {
-            border: 1px solid transparent;
-            height: 100%;
-            width: 48%;
-        }
-
-        .onedivsr {
-            display: flex;
-            flex-direction: row;
-            border: 1px solid transparent;
-            height: 100%;
-            width: 100%;
-        }
-
-        #onerl {
-            border: 1px solid transparent;
-            height: 100%;
-            width: 55%;
-        }
-
-        .search_bar {
-            text-align: right;
-            border: 1.5px solid black;
-            width: 100%;
-            height: 30px;
-            margin-top: 22px;
-            cursor: pointer;
-            background-color: white;
-        } */
-/* 
-        #onerr {
-            display: flex;
-            flex-direction: row;
-            border: 1px solid transparent;
-            height: 100%;
-            width: 45%;
-        }
-
-        .onerrl {
-            border: 1px solid transparent;
-            height: 100%;
-            width: 20%;
-        }
-
-        .onerrr {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            border: 1px solid transparent;
-            height: 100%;
-            width: 80%;
-        } */
-
-        #six {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 250px;
-        }
-
-        #seven {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 15px;
-        }
-
-        #eight {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 40px;
-        }
-
-        #nine {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 20px;
-        }
-
-        #ten {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 110px;
-        }
-
-        #eleven {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 10px;
-        }
-
-        #twelve {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 270px;
-        }
-
-        #thirteen {
-            display: flex;
-            flex-direction: row;
-            border: 1px solid transparent;
-            width: 100%;
-            height: 190px;
-        }
-
-        #help_block {
-            border: 1px solid transparent;
-            margin-left: 80px;
-            height: 100%;
-            width: 125p
-        }
-
-        #follow_us_block {
-            border: 1px solid transparent;
-            margin-left: 40px;
-            height: 100%;
-            width: 70px;
-        }
-
-        #company_block {
-            border: 1px solid transparent;
-            margin-left: 40px;
-            height: 100%;
-            width: 80px;
-        }
-
-        #policies_block {
-            border: 1px solid transparent;
-            margin-left: 40px;
-            height: 100%;
-            width: 125px;
-        }
-
-        #fourteen {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 235px;
-        }
-
-        #fifteen {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 40px;
-        }
-
-        #sixteen {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 110px;
-        }
-
-        #seventeen {
-            align-items: center;
-            border: 1px solid transparent;
-            width: 100%;
-            height: 30px;
-        }
-
-        #eighteen {
-            border: 1px solid transparent;
-            width: 100%;
-            height: 90px;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="parent">
-
-        <header>
-            <div class="hidden">
-                <ul class="ul" type="none">
-                    <strong>PRODUCTS</strong>
-                    <ul type="none">
-                        <li><a href="womanpro.html">WOMAN</a></li>
-                        <li><a href="manpro.html">MAN</a></li>
-                        <li><a href="kidspro.html">KIDS</a></li>
-                        <!-- <li>Bags</li>
-                        <li>Shoes</li> -->
-                    </ul>
-                    <!-- <strong>MAN</strong>
-                    <ul type="none">
-                        <li>Shirts</li>
-                        <li>Trousers</li>
-                        <li>Jackets</li>
-                        <li>Bags</li>
-                        <li>Shoes</li>
-                    </ul>
-                    <strong>KIDS</strong>
-                    <ul type="none">
-                        <li>Shirts</li>
-                        <li>Trousers</li>
-                        <li>Jackets</li>
-                        <li>Bags</li>
-                        <li>Shoes</li>
-                    </ul> -->
-                </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zara.com/login/</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <nav id="deact">
+      <div class="toggleBar">
+        <span class="material-icons-outlined tgl2"> menu </span>
+      </div>
+      <div class="inside1">
+        <label for="menu" class="menu">
+          <span class="material-icons-outlined tglFwd"> menu </span>
+        </label>
+        <!-- <div class="toggleMenu"></div> -->
+
+        <label for="logo" id="logoId">
+          <svg
+            aria-label="ZARA India logo. Go to home page"
+            class="layout-logo__icon layout-header__logo-icon img"
+            viewBox="0 0 132 55"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M105.673.035l19.557 53.338 6.77.002v.383h-21.548v-.383h6.344l-6.431-17.54H97.311v.007l.07.204c.521 1.548.78 3.17.764 4.803v6.575c0 3.382 1.494 6.81 4.347 6.81 1.675 0 3.012-.59 4.604-2.046l.227.211C105.594 54.224 103.5 55 100.36 55c-2.37 0-4.398-.57-6.03-1.693l-.309-.222c-2.148-1.624-3.542-4.278-4.142-7.89l-.096-.583-.1-.882-.01-.152-3.599 9.792h5.107v.384H80.496v-.384h5.162l3.951-10.753v-.023a34.924 34.924 0 0 1-.075-1.906v-4.693c0-5.77-4.29-9.08-11.771-9.08H70.41v26.458h6.371v.383h-24.9v-.383h6.345l-6.431-17.54H33.948l-6.371 17.346.266-.044c8.366-1.442 12.213-7.827 12.265-14.55h.388v15.171H0L30.06 2.185H17.972C7.954 2.185 3.42 9.922 3.35 17.635h-.387V1.8h36.488l-.222.385L9.396 53.373h15.695c.39 0 .778-.019 1.169-.05.26-.018.522-.044.788-.077l.095-.01L46.703 0h.387l.013.035 15.369 41.916V2.185h-6.328v-.39h21.778c10.467 0 17.774 5.372 17.774 13.068 0 5.612-5.005 10.27-12.45 11.595l-1.367.174 1.377.14c4.515.517 8.1 1.906 10.641 4.127l.017.016L105.273 0h.386l.014.035zm-8.552 35.32l.038.094h13.061l-8.773-23.928-7.221 19.67.039.037.367.364a11.876 11.876 0 0 1 2.489 3.762zM70.415 26.53V2.185h5.611c7.496 0 11.454 4.414 11.454 12.76 0 8.877-2.272 11.585-9.717 11.585h-7.348zM42.882 11.521L34.09 35.45h17.565L42.882 11.52z"
+            ></path>
+          </svg>
+        </label>
+      </div>
+      <div class="inside2">
+        <ul id="list1">
+          <li><input id="search" type="search" placeholder="SEARCH" /></li>
+        </ul>
+        <ul id="list2">
+          <li id="login">LOGIN</li>
+          <br />
+          <li id="help">HELP</li>
+          <li id="cart0">CART (<span id="cartcnt">0</span>)</li>
+        </ul>
+      </div>
+    </nav>
+    <div id="navLastDiv">
+      <input id="fullSearch" placeholder="ENTER SEARCH TERMS" type="text">
+      <hr id="belowSearch">
+    </div>
+    <!------------------------------------------ main part -------------------------------------->
+    <div class="section-box">
+      <div class="toggleBar2">
+        <ul>
+         <li id="first">WOMAN</li> 
+          <li id="second">MAN</li>
+          <li id="third">KIDS</li>
+          <li id="fourth">LIL MCKIMM</li>
+          <li id="fifth">SHOES&BAGS</li>
+          <li id="sixth">ZARA ATHLETICZ</li>
+        </ul>
+        <ul>
+          <li>JOIN LIFE</li>
+          <li>+ INFO</li>
+        </ul>
+      </div>
+      <section id="videoSide" class="hide0">
+        <!-- left bar start  -->
+        <div class="left-bar spcl"></div>
+        <!-- left bar ends -->
+
+        <!-- image div starts -->
+        <div class="imageDiv vid">
+          <p id="notif"></p>
+          <div class="loginBox">
+            
+            <!-- loginbox -->
+
+            <div class="LOG">
+              <h2>LOG IN</h2>
+              <form action="">
+              <input id="email" type="email" placeholder="E-MAIL" required>
+              <input id="password" type="password" placeholder="PASSWORD" required>
+              <p>HAVE YOUR FORGOTTEN YOUR PASSWORD?</p>
+              <input id="loginbtn" type="submit" value="LOG IN">
+              </form>
             </div>
-            <nav>
-                <div class="menu">
-                    <span style="color: red;"></span>
-                    <span style="color: red;"></span>
-                </div>
-                <img class="Imagess"
-                    src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-retailer-logo-black-png-images-5.png"
-                    alt="Logo Of ZARA">
-                <a class="login" href="login.html">LOG IN</a>
-                <a href="help.html">HELP</a>
-                <a href="cart.html">SHOPPING BAG <span>(0)</span></a>
-            </nav>
-        </header>
-        <div id="picbox">
-            <div id="main">
-                <div id="left">
-                    <p id="log">LOG IN</p>
-                    <div id="enter_email"> </div>
-                    <div><input type="email" placeholder="E-MAIL" id="input1" onclick="email()"></div>
+            <!-- registerBox -->
+            <div class="REGISTER">
+              <h2>REGISTER</h2>
+              <P>IF YOU STILL DON'T HAVE A <b>ZARA.COM</b> ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</P>
 
-                    <div id="validation1"></div>
-                    <div>&nbsp;</div>
-                    <div id="enter_password"> </div>
-                    <div><input type="password" placeholder="PASSWORD" id="input2" onclick="password()"></div>
-                    <div id="validation2"></div>
-
-                </div>
-                <div id="right">
-                    <p id="reg"><strong>REGISTER</strong></p>
-                    <p>IF YOU STILL DON'T HAVE A ZARA.COM ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</p>
-                    <p>BY GIVING US YOUR DETAILS, PURCHASING IN ZARA.COM WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</p>
-
-                </div>
-                <table>
-                    <tr>
-                        <td><a><button id="button_margin_left" onclick="checklogin()"><strong>LOG
-                                        IN</strong></button></a></td>
-                        <td><a href="register.html"><button id="button_margin_right"><strong>CREATE
-                                        ACCOUNT</strong></button></a></td>
-                    </tr>
-                </table>
-
+               <p>BY GIVING US YOUR DETAILS, PURCHASING IN <b>ZARA.COM</b> WILL BE FASTER AND AN ENJOYABLE EXPERIENCE</P>
+                <input id="createbtn" type="submit" value="CREATE ACCOUNT">
             </div>
-
-
+          </div>
         </div>
+        <!-- image div ends -->
 
-    
-    <div id="six"></div>
-    <div id="seven">
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;">JOIN OUR NEWSLETTER</p>
-    </div>
-    <div id="eight"></div>
-    <div id="nine">
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;font-size:11px;color: grey;">ENTER YOUR EMAIL
-            ADDRESS HERE</p>
-        <hr style="margin-left: 80px; color: grey; margin-right: 780px;">
-    </div>
-    <div id="ten"></div>
-    <div id="eleven">
-        <p
-            style="justify-content: space-around; margin: auto;font-family: Helvetica;margin-left: 80px;font-size:11px;color: grey;">
-            INSTAGRAM // FACEBOOK // TWITTER // PINTEREST // YOUTUBE // SPOTIFY</p>
-    </div>
-    <div id="twelve"></div>
-    <div id="thirteen">
-        <div id="help_block">
-            <h6 style="font-family:sans-serif;margin-top: 0%;">Help</h6>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">MY ZARA ACCOUNT</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;"> ITEMS AND SIZES</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;"> GIFT OPTIONS</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">SHIPPING</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">PAYMENT AND INVOICES</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">MY PURCHASES</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">EXCHANGES, RETURNS AND
-                REFUNDS</p>
-            <!--   <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">ZARA EXPERIENCIES</p>  -->
+        <!-- right bar starts -->
+        <div class="right-bar">
         </div>
-        <div id="follow_us_block">
-            <h6 style="font-family:sans-serif;margin-top: 0%;">FOLLOW US</h6>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">NEWSLETTER</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">INSTAGRAM</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">FACEBOOK</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">TWITTER</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">PINTEREST</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">YOUTUBE</p>
-        </div>
-        <div id="company_block">
-            <h6 style="font-family:sans-serif;margin-top: 0%;">COMPANY</h6>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">ABOUT US</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">JOIN LIFE</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">OFFICES</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">STORES</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">WORK WITH US</p>
-        </div>
-        <div id="policies_block">
-            <h6 style="font-family:sans-serif;margin-top: 0%;">POLICIES</h6>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">PRIVACY POLICY</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">PURCHASE CONDITIONS</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">GIFT CARD CONDITIONS</p>
-            <p style="font-family: sans-serif;font-size:10px;color: grey;margin-bottom: 0%;">COOKIES SETTINGS</p>
-        </div>
+        <!-- right bar ends -->
+      </section>
     </div>
-    <div id="fourteen"></div>
-    <div id="fifteen">
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;font-size:11px;color: grey;">ZARA / KIDS / NEW
-            COLLECTION / 6-14 YEARS | GIRL / NEW</p>
-        <p style="margin: auto;font-family: Helvetica;margin-left: 1000px ;font-size:11px;color: grey;">ENGLISH || © ALL
-            RIGHTS RESERVED</p>
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;font-size:11px;color: grey;">INDIA</p>
-    </div>
-    <div id="sixteen"></div>
-    <div id="seventeen">
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;font-size:9px;color: grey;">NAME AND ADDRESS OF
-            THE MANUFACTURER:</p>
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;font-size:9px;color: grey;">INDUSTRIA DE DISEÑO
-            TEXTIL, S.A. (INDITEX, S.A.)</p>
-        <p style="margin: auto;font-family: Helvetica;margin-left: 80px;font-size:9px;color: grey;">AVENIDA DE LA
-            DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
-    </div>
-    <div id="eighteen"></div>
-
-    </div>
-</div>
-    <script>
-        //  logincheck
-        let Hidden = document.querySelector(".hidden")
-        let Menu = document.querySelector(".menu")
-        let Image = document.querySelector(".Imagess") 
-        var email = document.getElementById("input1")
-        var password = document.getElementById("input2");
-        var count = 0;
-        function checklogin() {
-            var logindata = JSON.parse(localStorage.getItem("logindata"))
-            for (let i = 0; i < logindata.length; i++) {
-                if (email.value == logindata[i].email && password.value == logindata[i].password) {
-                    count++;
-                }
-            }
-            if (count >= 1) {
-                alert("Login Successful")
-                window.location.href = "index.html";
-
-            }
-            else {
-                alert("Enter Valid Password")
-            }
-        }
-        Menu.addEventListener('click',HamBurger)
-       Image.addEventListener('click',Homepage)
-
-function HamBurger(){
-    Hidden.classList.toggle('active');
-    Menu.classList.toggle('active')
-}
-
-function Homepage(){
-    window.location.href = "index.html"
-} 
-        
-
-// var logindata = JSON.parse(localStorage.getItem("logindata"));
-//         var Name = logindata[logindata.length - 1].name;
-//         console.log(Name)
-//         var putname = document.getElementById("loggin");
-//         putname.textContent = Name;
-    </script>
-</body>
-
+    <!--this is footer section-->
+    <footer>
+      <h3>JOIN OUR NEWSLETTER</h3>
+      <input type="text" placeholder="ENTER YOUR EMAIL ADDRESS HERE" />
+      <div id="icons">
+        <a target="_blank" href="https://www.snapchat.com/"><p>TIKTOK</p></a>
+        <a target="_blank" href="https://www.instagram.com"><p>INSTAGRAM</p></a>
+        <a target="_blank" href="https://www.snapchat.com/"><p>FACEBOOK</p></a>
+        <a target="_blank" href="https://twitter.com/"><p>TWITTER</p></a>
+        <a target="_blank" href="https://www.pinterest.com/"><p>PINTEREST</p></a>
+        <a target="_blank" href="https://www.youtube.com/"><p>YOUTUBE</p></a>
+      </div>
+      <hr />
+      <div>
+        <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+        <p>INDSUTRIES DE DIESNO TEXTILE, S.A. (INDITEX,S.A.)</p>
+        <p>
+          AVENIDA LA DIPUTATION, EDIFICIO INDITEX, 15143, ARTEIXO (A
+          CORUNA).SPAIN
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
+<script src="login.js"></script>

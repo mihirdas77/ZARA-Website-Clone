@@ -15,9 +15,9 @@
     height: 80px;
     width: 100%;
     margin-top: 10px;
-    /* border: 1px solid black;  */
+    /* border: 1px solid black;*/
     position: fixed;
-    display: block;
+    /* display: block; */
     top: 0;
   }
   .img {
@@ -61,7 +61,7 @@
   #search {
     width: 90px;
     border: none;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     padding: 6px;
     outline: none;
     cursor: pointer;
@@ -135,8 +135,8 @@
   .section-box {
     display: flex;
     overflow: hidden;
-    width: 100%;
-    height: 572px;
+    /* width: 100%; */
+    /* height: 572px; */
     /* border: 1px solid red; */
     position: relative;
     /* margin-top: 10px; */
@@ -144,19 +144,18 @@
     /* margin-top: -4px; */
   }
   
-  #hide1,
-  #hide2,
-  #hide3,
-  #hide4 {
-    display: none;
-  }
+ 
   #videoSide {
     background-color: transparent;
     cursor: pointer;
   }
   .imageDiv {
     /* border: 1px solid black; */
-    height: 90%;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* height: 350px; */
+    margin-top:50px
+    /* height: 90%; */
   }
   footer {
     /* border: 1px solid black; */
@@ -230,7 +229,7 @@
     text-align: right;
     background-color: rgba(255, 255, 255, 0.897);
     display: none;
-    /* border: 1px solid black; */
+    /* border: 1px solid black;y */
     /* background-color: yellow; */
   }
   .toggleBar2{
@@ -278,11 +277,158 @@
     margin-left: 50px;
   }
   
+  .cartImage{
+    margin-top: 20px;
+  }
+
+  .cartImage p{
+    position: sticky;
+    top: 50%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  
+  .cartImage{
+    display: flex;
+    /* border: 1px solid blue; */
+    justify-content: flex-start;
+    gap: 10px;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* overflow: scroll; */
+    margin: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-wrap: wrap;
+  }
+
+  #cartInnerDiv{
+    width: 200px;
+    height: 350px;
+    /* border: 1px solid black; */
+  }
+
+  #eleImg{
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+  }
+
+  #eleName{
+    font-size: 12px;
+
+  }
+
+  #elePrice{
+    font-size: 13px;
+    color: teal;
+  }
+
+  #eleColor{
+    color: black;
+    font-size: 12px;
+    color: gray;
+  }
+
+  #totalContainer{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+
+  }
+
+  #totalContainer > div{
+    float: right;
+    width: 380px;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  #totalContainer p{
+    font-size: 12px;
+  }
+
+  #continue{
+    width: 200px;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #continue:hover{
+    background-color: rgba(0, 0, 0, 0.26);
+  }
+   
   
   
+  #totalContainer > div >div >p:nth-child(1){
+    color: #a50028;
+    font-weight: 500;
+  }
   
   
+  #totalContainer > div >div >p:not(:first-child){
+    color: teal;
+    font-size: 11px;
+    font-weight: 500;
+  }
+/* 
+  .cartImage div{
+      /* border: 1px solid rgba(128, 128, 128, 0.349); */
+      /* width: 110px;
+      height: 130px;
+      margin: 20px;
+      padding: 20px;
+  } */ */
+
   
+
+  .cartImage p{
+      margin-top: 10px;
+      font-weight: 500;
+      color: gray;
+  }
+
+
+  #imgs{
+    width: 100px;
+    height: 100px;
+  }
+
+#hf{
+  text-align: center;
+}
+
+.cartImage input{
+  padding: 10px;
+  width: 60%;
+  margin: 8px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(182, 16, 16, 0.377);
+  border-radius: 5px;
+  
+}
+
+
+
+
+
+
+
+  
+
+
+
   
   
   

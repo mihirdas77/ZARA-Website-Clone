@@ -20,6 +20,14 @@ var help = document.getElementById("help");
 var cartcnt = document.getElementById("cartcnt")
 var cartItemCount = JSON.parse(localStorage.getItem("cartItemCount"))
 cartcnt.textContent = cartItemCount
+var enterOtp = document.getElementById("enterOtp")
+var helpContainer = document.querySelector(".helpContainer")
+var ticketContainer = document.querySelector(".tickContainer")
+var label = document.getElementById("label")
+
+var checkicon = document.querySelector(".check-icon")
+var gotohome = document.getElementById("goToHome")
+var cnfrm = document.getElementById("cnfrm")
 //=============functionSelection====================//
 function activation(){
     toggleBar.style.display = "block";
@@ -77,6 +85,24 @@ function goToCartPage(){
     console.log("hleo")
   }
 
+  function openOtp(){
+helpContainer.style.display = "none"
+ticketContainer.style.display = "block"
+setTimeout("showTick()",2000)
+  }
+
+  function showTick(){
+    checkicon.style.display = "block"
+    label.style.animation = "none"
+    label.style.borderColor = "black"
+    label.style.transition = "border 0.5s ease-out"
+    gotohome.style.display = "block"
+    cnfrm.style.display = "block"
+  }
+
+
+
+  
 
 //=============eventsSelection====================//
 
@@ -94,3 +120,5 @@ first.addEventListener("click",goToWomenPage);
   search.addEventListener("click",goToSearchPage)
   help.addEventListener("click",goToHelpPage)
   cart0.addEventListener("click",goToCartPage)
+  enterOtp.addEventListener("click",openOtp)
+  gotohome.addEventListener("click",goToHomePage)

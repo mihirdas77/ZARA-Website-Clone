@@ -14,13 +14,21 @@ var third = document.getElementById("third");
 var fourth = document.getElementById("fourth");
 var fifth = document.getElementById("fifth");
 var sixth = document.getElementById("sixth");
-var login = document.getElementById("login")
+var createbtn = document.getElementById("createbtn")
 var cart0 = document.getElementById("cart0");
 var help = document.getElementById("help");
-var cartcnt = document.getElementById("cartcnt")
-var cartItemCount = JSON.parse(localStorage.getItem("cartItemCount"))
-cartcnt.textContent = cartItemCount
+var zaraUserInfo = JSON.parse(localStorage.getItem("zaraUserInfo"));
+var loginBtn = document.getElementById("loginbtn");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+var p = document.getElementById("notif")
+var form  = document.querySelector("form");
+
+
+
 //=============functionSelection====================//
+
+
 function activation(){
     toggleBar.style.display = "block";
     toggleBar2.style.display = "block"
@@ -54,16 +62,17 @@ function goToWomenPage(){
       console.log("hlo")
   }
   //========== toggle functions ends here============ //
-  function goToHomePage(){
+
+function goToCreatePage(){
+    window.location.href = "signup.html"
+}
+
+function goToHome(){
     window.location.href = "index.html"
 }
 
-  function goToSearchPage(){
+function goToSearch(){
     window.location.href = "search.html"
-}
-
-function goToLoginPage(){
-    window.location.href = "login.html"
 }
 
 function goToCartPage(){
@@ -77,9 +86,22 @@ function goToCartPage(){
     console.log("hleo")
   }
 
+  function goToUserPage(event){
+      event.preventDefault();
+      console.log("hi")
+      for(var i = 0; i < zaraUserInfo.length; i++){
+         if(zaraUserInfo[i].userEmail != email.value){
+            p.textContent = "please check your mail"
+         }else if(zaraUserInfo[i].userPassword != password.value){
+             p.textContent = "please check your password"
+         }else{
+             p.textContent = "";
+             window.location.href = "index.html"
+         }
+    }
+}
 
 //=============eventsSelection====================//
-
 tgl2.addEventListener("click",deactivation);
 // toggleBar.addEventListener("click",print);
 tglFwd.addEventListener("click",activation);
@@ -89,8 +111,10 @@ first.addEventListener("click",goToWomenPage);
   fourth.addEventListener("click",goToLilPage);
   fifth.addEventListener("click",goToShoesBagsPage);
   sixth.addEventListener("click",goToAthleticzPage);
-  login.addEventListener("click",goToLoginPage);
-  logo.addEventListener("click",goToHomePage)
-  search.addEventListener("click",goToSearchPage)
-  help.addEventListener("click",goToHelpPage)
-  cart0.addEventListener("click",goToCartPage)
+  createbtn.addEventListener("click",goToCreatePage);
+  logo.addEventListener("click",goToHome);
+  search.addEventListener("click",goToSearch);
+  help.addEventListener("click",goToHelpPage);
+  cart0.addEventListener("click",goToCartPage);
+  form.addEventListener("submit",goToUserPage);
+

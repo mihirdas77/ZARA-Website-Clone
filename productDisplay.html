@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zara.com/cart/</title>
+    <title>zara.com/women/clothes/</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="productDisplay.css" />
   </head>
   <body>
     <nav id="deact">
@@ -53,11 +53,26 @@
         </ul>
       </div>
     </nav>
+    <div id="navLastDiv">
+      <input id="fullSearch" placeholder="ENTER SEARCH TERMS" type="text" />
+      <hr id="belowSearch" />
+    </div>
+    <div class="keywords">
+      <div>
+      <p><span id="results"></span> Results</p>
+      <div>
+        <p id="wmn">WOMAN</p>
+        <p id="mn">MAN</p>
+        <p id="kds">KIDS</p>
+      </div>
+    </div>
+      <p id="fltr">FILTER</p>
+    </div>
     <!------------------------------------------ main part -------------------------------------->
     <div class="section-box">
       <div class="toggleBar2">
         <ul>
-         <li id="first">WOMAN</li> 
+          <li id="first">WOMAN</li>
           <li id="second">MAN</li>
           <li id="third">KIDS</li>
           <li id="fourth">LIL MCKIMM</li>
@@ -76,20 +91,46 @@
 
         <!-- image div starts -->
         <div class="imageDiv vid">
-          <div class="cartImage">
-            <!-- <p>-Your basket is empty-</p>
-          <img
-            height="100%"
-            width="100%"
-            src="https://static.zara.net/static//common/images/empty-basket/empty-basket.jpg"
-            alt=""
-          /> -->
-        </div>
+        
         </div>
         <!-- image div ends -->
 
         <!-- right bar starts -->
-        <div class="right-bar">
+        <div class="right-bar"></div>
+        <!-- //============filter bar====================== // -->
+        <div class="filterDiv">
+          <p id="close">CLOSE</p>
+          <div>
+            <p id="clrbar">COLOR</p>
+            <hr id="split"/>
+            <ul>
+              <li id="blue">blue</li>
+              <li id="black">black</li>
+              <li id="brown">brown</li>
+            </ul>
+            <details>
+              <summary id="smry">+more</summary>
+              <ul>
+                <li id="pink">pink</li>
+                <li id="red">red</li>
+                <li id="white">white</li>
+                <li id="green">green</li>
+                <li id="yellow">yellow</li>
+                <li id="purple">purple</li>
+                <li id="ecru">ecru</li>
+                <li id="gray">gray</li>
+              </ul>
+            </details>
+          </div>
+
+          <div>
+            <p id="prbar">PRICE</p>
+            <hr id="split" />
+            <ul>
+              <li id="low">low to high</li>
+              <li id="high">high to low</li>
+            </ul>
+          </div>
         </div>
         <!-- right bar ends -->
       </section>
@@ -103,7 +144,9 @@
         <a target="_blank" href="https://www.instagram.com"><p>INSTAGRAM</p></a>
         <a target="_blank" href="https://www.snapchat.com/"><p>FACEBOOK</p></a>
         <a target="_blank" href="https://twitter.com/"><p>TWITTER</p></a>
-        <a target="_blank" href="https://www.pinterest.com/"><p>PINTEREST</p></a>
+        <a target="_blank" href="https://www.pinterest.com/"
+          ><p>PINTEREST</p></a
+        >
         <a target="_blank" href="https://www.youtube.com/"><p>YOUTUBE</p></a>
       </div>
       <hr />
@@ -116,18 +159,6 @@
         </p>
       </div>
     </footer>
-    <div  id="totalContainer">
-      <div>
-        <div>
-          <p>TOTAL ₹ <span id="totalPrice"></span>.00</p>
-          <p>INCLUDING GST</p>
-          <p>EXCL SHIPPING COST</p>
-        </div>
-          <div>
-            <input id="continue" type="submit" value="CONTINUE">
-          </div>
-      </div>
-    </div>
   </body>
+  <script src="productDisplay.js"></script>
 </html>
-<script src="cart.js"></script>

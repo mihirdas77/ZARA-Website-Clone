@@ -17,10 +17,14 @@ var sixth = document.getElementById("sixth");
 var login = document.getElementById("login")
 var cart0 = document.getElementById("cart0");
 var help = document.getElementById("help");
-var cartcnt = document.getElementById("cartcnt");
+var cartcnt = document.getElementById("cartcnt")
 var cartItemCount = JSON.parse(localStorage.getItem("cartItemCount"))
 cartcnt.textContent = cartItemCount
 var conti = document.getElementById("continue")
+var crdn = document.getElementById("crdn");
+var cv = document.getElementById("cv")
+
+// var conti = document.getElementById("continue")
 
 
 //=============functionSelection====================//
@@ -80,9 +84,18 @@ function goToCartPage(){
     console.log("hleo")
   }
 
-  function goToPaymentPage(){
-      window.location.href = "payment.html"
-  }
+  function goToOtp(){
+    if(crdn.value.length > 0 && crdn.value.length == 16){
+        if(cv.value.length > 0 && cv.value.length == 3){
+            window.location.href = "otp.html"
+        }else{
+            alert("check you cvv")
+        }
+    }else{
+        alert("card number should be of 16 numbers")
+    } 
+} 
+   
 
 
 //=============eventsSelection====================//
@@ -101,81 +114,8 @@ first.addEventListener("click",goToWomenPage);
   search.addEventListener("click",goToSearchPage);
   help.addEventListener("click",goToHelpPage);
   cart0.addEventListener("click",goToCartPage);
-  conti.addEventListener("click",goToPaymentPage)
+  conti.addEventListener("click",goToOtp)
+
   var totalPrice = document.getElementById("totalPrice")
-
-  var cartStore = JSON.parse(localStorage.getItem("cartStore"))
-
-  var cartImage = document.querySelector(".cartImage")
-  console.log(cartImage)
-
   var cartTotalPrice = JSON.parse(localStorage.getItem("cartTotalPrice"))
-  
-
-
-  displayCartProducts(cartStore);
-
-  function displayCartProducts(cartStore){
-      cartImage.textContent = ""
-      cartStore.map(function(item,index){
-        var cartInnerDivs = document.createElement("div");
-        cartInnerDivs.setAttribute("id","cartInnerDiv");
-
-        var eleName = document.createElement("h2");
-        var elePrice = document.createElement("span");
-        var eleColor = document.createElement("span");
-        var eleImg = document.createElement("img");
-        var clrSpan = document.createElement("div");
-        var priceSpan = document.createElement("div");
-        var delbtn = document.createElement("div")
-        delbtn.setAttribute("id","delbtn")
-
-        clrSpan.textContent = "Color :-"
-        priceSpan.textContent = "₹ "
-        delbtn.innerHTML = `<span class="material-icons-outlined">
-        delete_outline
-        </span>`
-        totalPrice.textContent = cartTotalPrice
-
-        eleName.setAttribute("id","eleName")
-        elePrice.setAttribute("id","elePrice")
-        eleColor.setAttribute("id","eleColor")
-
-        eleImg.setAttribute("id","eleImg")
-
-
-
-        eleName.textContent = item.name;
-        elePrice.textContent = item.price;
-        eleColor.textContent = item.color;
-        eleImg.src = item.image_url;
-
-        clrSpan.append(eleColor)
-        priceSpan.append(elePrice)
-        cartInnerDivs.append(eleImg,eleName,priceSpan,clrSpan,delbtn)
-
-
-        delbtn.addEventListener("click",function(){
-            deleteCartItem(item,index)
-        })
-        cartImage.append(cartInnerDivs)
-
-      })
-  }
-
-function deleteCartItem(item,index){
-cartStore.splice(index,1)
-// console.log(item)
-cartItemCount = cartItemCount - 1
-console.log(cartItemCount)
-localStorage.setItem("cartItemCount",JSON.stringify(cartItemCount))
-cartTotalPrice = cartTotalPrice - item.price
-console.log(cartTotalPrice)
-localStorage.setItem("cartTotalPrice",JSON.stringify(cartTotalPrice))
-console.log(index)
-localStorage.setItem("cartStore",JSON.stringify
-(cartStore))
-displayCartProducts(cartStore)
-window.location.href = "cart.html"
-// localStorage.setItem
-  }
+  totalPrice.textContent = cartTotalPrice

@@ -18,8 +18,8 @@ var login = document.getElementById("login")
 var cart0 = document.getElementById("cart0");
 var help = document.getElementById("help");
 var cartcnt = document.getElementById("cartcnt")
-var cartItemCount = JSON.parse(localStorage.getItem("cartItemCount"))
 cartcnt.textContent = cartItemCount
+
 //=============functionSelection====================//
 function activation(){
     toggleBar.style.display = "block";
@@ -77,7 +77,6 @@ function goToCartPage(){
     console.log("hleo")
   }
 
-
 //=============eventsSelection====================//
 
 tgl2.addEventListener("click",deactivation);
@@ -94,3 +93,63 @@ first.addEventListener("click",goToWomenPage);
   search.addEventListener("click",goToSearchPage)
   help.addEventListener("click",goToHelpPage)
   cart0.addEventListener("click",goToCartPage)
+  var cartBtn = document.getElementById("cartBtn");
+  var cartBtn2 = document.getElementById("cartBtn2")
+  var cartBtn3 = document.getElementById("cartBtn3")
+  var cartStore = JSON.parse(localStorage.getItem("cartStore")) || [];
+  var cartTotalPrice = JSON.parse(localStorage.getItem("cartTotalPrice")) || 0;
+  var cartItemCount = JSON.parse(localStorage.getItem("cartItemCount")) || 0;
+
+var selectedData = JSON.parse(localStorage.getItem("selectedProduct"))  
+var price = document.getElementById("price");
+var productName = document.getElementById("productName");
+var desc = document.getElementById("desc");
+var color = document.getElementById("color");
+var basketItemName = document.getElementById("basketItemName");
+var quantityPrice = document.getElementById("quantityPrice");
+var basketImg = document.getElementById("basketImg");
+var basketBar = document.getElementById("basketBar");
+
+var productImage = document.getElementById("productImage");
+
+
+price.textContent = selectedData.price;
+productName.textContent = selectedData.name;
+desc.textContent = selectedData.desc;
+color.textContent = selectedData.color;
+productImage.src = selectedData.image_url;
+
+basketItemName.textContent = selectedData.name
+quantityPrice.textContent = selectedData.price
+basketImg.setAttribute("src",selectedData.image_url)
+
+
+function addItemsToCart(){
+  cartItemCount++
+  cartStore.push(selectedData)
+  cartTotalPrice += selectedData.price
+  localStorage.setItem("cartItemCount",JSON.stringify(cartItemCount))
+  localStorage.setItem("cartTotalPrice",JSON.stringify(cartTotalPrice))
+ localStorage.setItem("cartStore",JSON.stringify(cartStore))
+ cartBtn2.style.display = "block"
+ basketBar.style.display = "block"
+ setTimeout("hideDiv()",2000)
+}
+
+function hideDiv(){
+  basketBar.style.display = "none"
+}
+
+function goToCartPage(){
+  window.location.href = "cart.html"
+}
+
+function goToPaymentPage(){
+  window.location.href = "payment.html"
+  console.log("hlo")
+}
+
+cartBtn.addEventListener("click",addItemsToCart);
+cartBtn3.addEventListener("click",goToCartPage);
+cartBtn2.addEventListener("click",goToPaymentPage)
+

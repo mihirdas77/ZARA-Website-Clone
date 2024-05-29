@@ -14,13 +14,21 @@ var third = document.getElementById("third");
 var fourth = document.getElementById("fourth");
 var fifth = document.getElementById("fifth");
 var sixth = document.getElementById("sixth");
-var login = document.getElementById("login")
+var login = document.getElementById("login");
 var cart0 = document.getElementById("cart0");
 var help = document.getElementById("help");
-var cartcnt = document.getElementById("cartcnt")
-var cartItemCount = JSON.parse(localStorage.getItem("cartItemCount"))
-cartcnt.textContent = cartItemCount
+var btn = document.getElementById("createBtn");
+
+var pswd1 = document.getElementById("pswd1");
+var pswd2 = document.getElementById("pswd2");
+var names = document.getElementById("name");
+var address = document.getElementById("address");
+var email = document.getElementById("email");
+
+var zaraUserInfo = JSON.parse(localStorage.getItem("zaraUserInfo")) || [];
+
 //=============functionSelection====================//
+
 function activation(){
     toggleBar.style.display = "block";
     toggleBar2.style.display = "block"
@@ -32,6 +40,10 @@ function deactivation(){
     tglFwd.style.display = "block";
     toggleBar2.style.display = "none"
     console.log("helo");
+}
+
+function goToLoginPage(){
+    window.location.href = "login.html"
 }
 
 function goToWomenPage(){
@@ -53,17 +65,13 @@ function goToWomenPage(){
   function goToShoesBagsPage(){
       console.log("hlo")
   }
-  //========== toggle functions ends here============ //
   function goToHomePage(){
-    window.location.href = "index.html"
-}
+      window.location.href = "index.html"
+  }
+  //========== toggle functions ends here============ //
 
-  function goToSearchPage(){
+function goToSearchPage(){
     window.location.href = "search.html"
-}
-
-function goToLoginPage(){
-    window.location.href = "login.html"
 }
 
 function goToCartPage(){
@@ -77,9 +85,38 @@ function goToCartPage(){
     console.log("hleo")
   }
 
+  function storeInfo(){
+      var zaraUserList = {
+            userEmail:email.value,
+            userPassword:pswd2.value,
+            userName:names.value
+      }
+
+      if(names.value == ""){
+          alert("Please fill the name")
+      }
+      else if(email.value == ""){
+          alert("plese fill the email")
+      }
+      else if(pswd1.value == ""){
+          alert("please enter the password")
+      } 
+      else if(pswd1.value =! pswd2.value){
+          alert("your password is not matching")
+      }
+       else if(address.value == ""){
+          alert("please fill the address area")
+      }else{
+        alert("You have signup successfully!")
+         zaraUserInfo.push(zaraUserList)
+         console.log(zaraUserInfo)
+         localStorage.setItem("zaraUserInfo",JSON.stringify(zaraUserInfo));
+         window.location.href = "login.html"
+      }    
+  }
+
 
 //=============eventsSelection====================//
-
 tgl2.addEventListener("click",deactivation);
 // toggleBar.addEventListener("click",print);
 tglFwd.addEventListener("click",activation);
@@ -89,8 +126,9 @@ first.addEventListener("click",goToWomenPage);
   fourth.addEventListener("click",goToLilPage);
   fifth.addEventListener("click",goToShoesBagsPage);
   sixth.addEventListener("click",goToAthleticzPage);
-  login.addEventListener("click",goToLoginPage);
+  login.addEventListener("click",goToLoginPage)
   logo.addEventListener("click",goToHomePage)
   search.addEventListener("click",goToSearchPage)
   help.addEventListener("click",goToHelpPage)
   cart0.addEventListener("click",goToCartPage)
+  btn.addEventListener("click",storeInfo)

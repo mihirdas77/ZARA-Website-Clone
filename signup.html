@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zara.com/cart/</title>
+    <title>zara.com/signup/</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
     <nav id="deact">
@@ -76,15 +76,50 @@
 
         <!-- image div starts -->
         <div class="imageDiv vid">
-          <div class="cartImage">
-            <!-- <p>-Your basket is empty-</p>
-          <img
-            height="100%"
-            width="100%"
-            src="https://static.zara.net/static//common/images/empty-basket/empty-basket.jpg"
-            alt=""
-          /> -->
-        </div>
+          <form class="detailsContainer">
+            <h2 id="h2">PERSONAL DETAILS</h2>
+            <input required id="fstRadio" type="radio" name="choose">
+            <label for="">PERSONAL</label>
+            <input id="scndRadio" type="radio" name="choose">
+            <label for="">COMPANY</label>
+            <div class="bothDetailContainer">
+            <div class="fstDetail">
+              <input id="email" type="email" placeholder="EMAIL">
+              <input id="pswd1" type="password" placeholder="PASSWORD">
+              <input id="name" type="text" placeholder="NAME">
+              <input id="address" type="text" placeholder="ADDRESS">
+              <input type="text" placeholder="LOCALITY">
+              <select name="state" id="states">
+                <option value="">--</option>
+                <option value="">Himachal Pradesh</option>
+                <option value="">Jammu & Kashmir</option>
+                <option value="">Madhya Pradesh</option>
+                <option value="">Bihar</option>
+                <option value="">Tamil Nadu</option>
+                <option value="">Jharkhand</option>
+                <option value="">Karnatka</option>
+                <option value="">Punjab</option>
+                <option value="">New Delhi</option>
+              </select>
+              <input id="prefix" type="number" placeholder="prefix">
+              <input id="telephone" type="number" placeholder="telephone">
+              <br>
+              <input type="checkbox">
+              <label id="recieve" for="">I WISH TO RECIEVE ZARA NEWS ON MY EMAIL</label>
+              <br>
+              <input type="checkbox">
+              <label id="accept" for="">I ACCEPT THE <u>PRIVACY STATEMENT</u></label>
+              <input id="createBtn" type="submit" value="CREATE ACCOUNT">
+            </div>
+            <div class="scndDetail">
+              <input id="pswd2" type="password" placeholder="REPEAT PASSWORD">
+              <input id="pincode" type="number" placeholder="PINCODE">
+              <input type="text" placeholder="MORE INFO">
+              <input type="text" placeholder="CITY">
+              <input type="text" placeholder="India">
+            </div>
+          </div>
+          </form>
         </div>
         <!-- image div ends -->
 
@@ -116,18 +151,6 @@
         </p>
       </div>
     </footer>
-    <div  id="totalContainer">
-      <div>
-        <div>
-          <p>TOTAL ₹ <span id="totalPrice"></span>.00</p>
-          <p>INCLUDING GST</p>
-          <p>EXCL SHIPPING COST</p>
-        </div>
-          <div>
-            <input id="continue" type="submit" value="CONTINUE">
-          </div>
-      </div>
-    </div>
   </body>
 </html>
-<script src="cart.js"></script>
+<script src="signup.js"></script>

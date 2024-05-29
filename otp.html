@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zara.com/cart/</title>
+    <title>zara.com/help/</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="otp.css"/>
   </head>
   <body>
     <nav id="deact">
@@ -71,25 +71,31 @@
       </div>
       <section id="videoSide" class="hide0">
         <!-- left bar start  -->
-        <div class="left-bar spcl"></div>
+        <!-- <div class="left-bar spcl"></div> -->
         <!-- left bar ends -->
 
         <!-- image div starts -->
         <div class="imageDiv vid">
-          <div class="cartImage">
-            <!-- <p>-Your basket is empty-</p>
-          <img
-            height="100%"
-            width="100%"
-            src="https://static.zara.net/static//common/images/empty-basket/empty-basket.jpg"
-            alt=""
-          /> -->
+            <div class="tickContainer">
+                <label id="label" for="enterOtp">
+                    <div class="check-icon"></div>
+                </label>
+                <div>
+                    <p id="cnfrm">Successfully Purchased</p>
+                <input id="goToHome" type="submit" value="GO TO HOME">
+            </div>
+            </div>
+          <div class="helpContainer">
+           <input type="number" placeholder="OTP">
+           <div>
+               <input id="enterOtp" type="submit" value="enter">
+           </div>
         </div>
-        </div>
+        
         <!-- image div ends -->
 
         <!-- right bar starts -->
-        <div class="right-bar">
+        <!-- <div class="right-bar"> -->
         </div>
         <!-- right bar ends -->
       </section>
@@ -116,18 +122,6 @@
         </p>
       </div>
     </footer>
-    <div  id="totalContainer">
-      <div>
-        <div>
-          <p>TOTAL ₹ <span id="totalPrice"></span>.00</p>
-          <p>INCLUDING GST</p>
-          <p>EXCL SHIPPING COST</p>
-        </div>
-          <div>
-            <input id="continue" type="submit" value="CONTINUE">
-          </div>
-      </div>
-    </div>
   </body>
 </html>
-<script src="cart.js"></script>
+<script src="otp.js"></script>
