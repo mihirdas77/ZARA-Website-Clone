@@ -1,134 +1,74 @@
-//=============variableSelection====================//
-var search = document.getElementById("search");
-var navLastDiv = document.getElementById("navLastDiv");
-var logo = document.getElementById("logoId");
-var section_box = document.querySelector(".section-box");
-var imageDiv = document.querySelector(".imageDiv")
-var tgl2 = document.querySelector(".tgl2");
-var toggleBar = document.querySelector(".toggleBar");
-var tglFwd = document.querySelector(".tglFwd");
-var toggleBar2 = document.querySelector(".toggleBar2");
-var first = document.getElementById("first");
-var second = document.getElementById("second");
-var third = document.getElementById("third");
-var fourth = document.getElementById("fourth");
-var fifth = document.getElementById("fifth");
-var sixth = document.getElementById("sixth");
-var login = document.getElementById("login");
-var cart0 = document.getElementById("cart0");
-var help = document.getElementById("help");
-var btn = document.getElementById("createBtn");
+document.querySelector("button").addEventListener("click", signUp)
+var usersData = JSON.parse(localStorage.getItem("userDataBase")) || []
 
-var pswd1 = document.getElementById("pswd1");
-var pswd2 = document.getElementById("pswd2");
-var names = document.getElementById("name");
-var address = document.getElementById("address");
-var email = document.getElementById("email");
+function signUp(event) {
+    event.preventDefault()
+    var email = document.querySelector("#email").value;
+    var password = document.querySelector("#password").value;
+    var reapeatpassword = document.querySelector("#reapeatpassword").value;
+    var name = document.querySelector("#name").value;
+    var pin = document.querySelector("#pin").value;
 
-var zaraUserInfo = JSON.parse(localStorage.getItem("zaraUserInfo")) || [];
+    var address = document.querySelector("#address").value;
+    var optional = document.querySelector("#optional").value;
+    var locality = document.querySelector("#locality").value;
+    var city = document.querySelector("#city").value;
+    var state = document.querySelector("#state").value;
+    var stateR = document.querySelector("#stateR").value;
+    var mobile = document.querySelector("#mobile").value;
+    var tel = document.querySelector("#tel").value;
+    var checkBox = document.getElementById("checkmark").checked
+    var checkBox1 = document.getElementById("checkmark1").checked;
+    if (name == "" || pin == "" || email == "" || password == "" || reapeatpassword == "" || address == "" ||
+        locality == "" || city == "" || state == "" || stateR == "" || mobile == "" || tel == "" || checkBox == false || checkBox1 == false) {
+        alert("Please enter all data")
+    } else {
+        var obj = {
+                name: name,
+                pin: pin,
+                email: email,
 
-//=============functionSelection====================//
+                password: password,
+                reapeatpassword: reapeatpassword,
+                address: address,
+                optional: optional,
+                locality: locality,
+                city: city,
+                state: state,
+                stateR: stateR,
+                tel: tel,
 
-function activation(){
-    toggleBar.style.display = "block";
-    toggleBar2.style.display = "block"
-    tglFwd.style.display = "none";
+
+
+
+
+
+            }
+            // console.log(obj)
+        usersData.push(obj);
+
+        window.location.href = "login.html";
+    }
+
+    localStorage.setItem("userDataBase", JSON.stringify(usersData))
+
 }
 
-function deactivation(){
-    toggleBar.style.display = "none";
-    tglFwd.style.display = "block";
-    toggleBar2.style.display = "none"
-    console.log("helo");
-}
 
-function goToLoginPage(){
-    window.location.href = "login.html"
-}
+// ---------------------Category Modal-----------------------------
 
-function goToWomenPage(){
-    console.log("hello")
-    window.location.href = "productDisplay.html"
-  }
-  function goToKidsPage(){
-      console.log("helo")
-  }
-  function goToLilPage(){
-      console.log("helo")
-  }
-  function goToManPage(){
-      console.log("helo")
-  }
-  function goToAthleticzPage(){
-      console.log("hleo")
-  }
-  function goToShoesBagsPage(){
-      console.log("hlo")
-  }
-  function goToHomePage(){
-      window.location.href = "index.html"
-  }
-  //========== toggle functions ends here============ //
+var menuModal = document.getElementById('menuModal');
 
-function goToSearchPage(){
-    window.location.href = "search.html"
-}
+document.querySelector('.close').addEventListener('click', function() {
+    menuModal.classList.add('animatedMenuShow');
 
-function goToCartPage(){
-    window.location.href = "cart.html"
-    console.log("cart")
-  }
+})
 
-  
-  function goToHelpPage(){
-    window.location.href = "help.html"
-    console.log("hleo")
-  }
-
-  function storeInfo(){
-      var zaraUserList = {
-            userEmail:email.value,
-            userPassword:pswd2.value,
-            userName:names.value
-      }
-
-      if(names.value == ""){
-          alert("Please fill the name")
-      }
-      else if(email.value == ""){
-          alert("plese fill the email")
-      }
-      else if(pswd1.value == ""){
-          alert("please enter the password")
-      } 
-      else if(pswd1.value =! pswd2.value){
-          alert("your password is not matching")
-      }
-       else if(address.value == ""){
-          alert("please fill the address area")
-      }else{
-        alert("You have signup successfully!")
-         zaraUserInfo.push(zaraUserList)
-         console.log(zaraUserInfo)
-         localStorage.setItem("zaraUserInfo",JSON.stringify(zaraUserInfo));
-         window.location.href = "login.html"
-      }    
-  }
+menuModal.addEventListener('animationend', function() {
+    if (this.classList.contains('animatedMenuShow')) {
+        this.style.display = 'none';
+        this.classList.remove('animatedMenuShow')
+    }
 
 
-//=============eventsSelection====================//
-tgl2.addEventListener("click",deactivation);
-// toggleBar.addEventListener("click",print);
-tglFwd.addEventListener("click",activation);
-first.addEventListener("click",goToWomenPage);
-  second.addEventListener("click",goToManPage);
-  third.addEventListener("click",goToKidsPage);
-  fourth.addEventListener("click",goToLilPage);
-  fifth.addEventListener("click",goToShoesBagsPage);
-  sixth.addEventListener("click",goToAthleticzPage);
-  login.addEventListener("click",goToLoginPage)
-  logo.addEventListener("click",goToHomePage)
-  search.addEventListener("click",goToSearchPage)
-  help.addEventListener("click",goToHelpPage)
-  cart0.addEventListener("click",goToCartPage)
-  btn.addEventListener("click",storeInfo)
+});
